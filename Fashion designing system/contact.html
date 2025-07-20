@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Fashion Designing System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #ffe4f1, #fff1f5);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      color: white;
+      backdrop-filter: blur(6px);
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 80px 20px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .contact-form, .map {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 12px 30px rgba(255, 105, 180, 0.25);
+      transition: all 0.4s ease;
+    }
+
+    .contact-form:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(255, 105, 180, 0.4);
+    }
+
+    .contact-form form {
+      padding: 35px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.7);
+      font-size: 16px;
+      margin-bottom: 20px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 0 3px #ff69b4aa;
+    }
+
+    .contact-form button {
+      background: linear-gradient(135deg, #ff69b4, #d63384);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(135deg, #d63384, #ff69b4);
+      transform: scale(1.05);
+      box-shadow: 0 8px 28px rgba(255, 105, 180, 0.5);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 20px;
+    }
+
+    .map {
+      height: 400px;
+      overflow: hidden;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .map {
+        height: 300px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fashion Designing System</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="designs.html">Designs</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Send us a message or visit us at our location.</p>
+
+    <div class="contact-container">
+      <div class="contact-form">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.904153261464!2d80.61414211482117!3d16.50617408862071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35eff5c999b7ed%3A0xc823204ca4725f66!2sKL%20University!5e0!3m2!1sen!2sin!4v1689500000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Fashion Designers Hub — Built with 💖 and creativity
+  </footer>
+</body>
+</html>
