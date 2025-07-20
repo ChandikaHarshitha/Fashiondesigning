@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Fashion Designing System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('FIMG2.webp'); /* Replace with your image file name */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #f7f0fa; /* fallback soft tone */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      text-align: center;
+    }
+
+    .form-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      color: #4b2c5e;
+      margin-bottom: 25px;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      background: transparent;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+
+    .form-container input:focus {
+      border-color: #a55eea;
+      outline: none;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #a55eea;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #8e44ad;
+    }
+
+    .form-container p {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .form-container a {
+      color: #a55eea;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Sign Up</h2>
+    <form onsubmit="signupUser(event)">
+      <input type="text" placeholder="Username" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="password" placeholder="Password" required><br>
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+  <script>
+    function signupUser(e) {
+      e.preventDefault();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

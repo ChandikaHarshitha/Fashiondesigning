@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Designs - Fashion Designing System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: url('0593aa65-8c6f-400a-ba79-e5e8e76d0665.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: 0.3s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #6978ff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding: 0 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fashion Designing System</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="designs.html">Designs</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Latest Designs</h2>
+    <div class="gallery">
+      <img src="design1.jpg" alt="Design 1" />
+      <img src="design2.jpg" alt="Design 2" />
+      <img src="design3.jpg" alt="Design 3" />
+      <img src="design4.jpg" alt="Design 4" />
+      <img src="design5.jpg" alt="Design 5" />
+      <img src="design6.webp" alt="Design 6" />
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Fashion Designers Hub
+  </footer>
+</body>
+</html>
